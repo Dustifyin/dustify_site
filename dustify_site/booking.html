@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Booking | Dustify</title>
+  <link rel="stylesheet" href="style.css"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f6f8;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .booking-form {
+      background: #fff;
+      max-width: 500px;
+      margin: auto;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+
+    .booking-form h2 {
+      margin-bottom: 20px;
+      color: #333;
+      text-align: center;
+    }
+
+    .booking-form input,
+    .booking-form select,
+    .booking-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .booking-form button {
+      width: 100%;
+      padding: 12px;
+      background-color: #00aaff;
+      border: none;
+      color: white;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .booking-form button:hover {
+      background-color: #0077cc;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="booking-form">
+    <h2>Book a Service</h2>
+    <form action="https://formspree.io/f/mgvzyyen" method="POST">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" placeholder="Your name" required>
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" placeholder="you@example.com" required>
+
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone" placeholder="Your phone number" required>
+
+      <label for="service">Select Service</label>
+      <select id="service" name="service" required>
+        <option value="">-- Choose a service --</option>
+        <option value="Home Cleaning">Home Cleaning</option>
+        <option value="BMS Services">BMS Services</option>
+        <option value="Field Cleaning">Field Cleaning</option>
+        <option value="Borewell Services">Borewell Services</option>
+        <option value="Hall Decoration">Hall Decoration</option>
+      </select>
+
+      <label for="date">Preferred Date</label>
+      <input type="date" id="date" name="date" required>
+
+      <label for="address">Service Location</label>
+      <textarea id="address" name="address" placeholder="Enter full address" rows="3" required></textarea>
+
+      <button type="submit">Book Now</button>
+    </form>
+  </div>
+
+</body>
+</html>
