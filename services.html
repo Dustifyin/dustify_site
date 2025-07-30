@@ -1,72 +1,79 @@
-<!-- services.html -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Services | Dustify</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle("dark-mode");
+    }
+  </script>
 </head>
+
 <body>
   <nav class="navbar">
     <div class="logo-container">
-      <img src="Logo.jpg" alt="Dustify Logo" class="logo" style="height: 50px;">
+      <img src="Logo.jpg" alt="Dustify Logo" class="logo">
     </div>
-  
-    <input type="checkbox" id="menu-toggle">
-    <label for="menu-toggle" class="menu-icon">&#9776;</label>
-  
+
+    <div class="nav-actions">
+      <a href="booking.html" class="book-btn">Book Now</a>
+      <button class="dark-toggle" onclick="toggleDarkMode()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/>
+        </svg>
+      </button>
+    </div>
+
+    <label for="menu-toggle" class="menu-icon">☰</label>
+    <input type="checkbox" id="menu-toggle" />
+
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="services.html">Services</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
-  
-    <div class="nav-right">
-      <a href="booking.html" class="book-btn">Book Now</a>
-      <button class="dark-toggle" onclick="toggleDarkMode()">🌙</button>
-    </div>
   </nav>
-  
 
-  <section class="service-section" data-aos="fade-up">
+  <section class="services" data-aos="fade-up">
     <h1>Our Services</h1>
-    <div class="service-grid">
-      <div class="service-card">
-        <h3>Home Cleaning</h3>
-        <p>We provide deep cleaning and regular maintenance for homes, including kitchens, bathrooms, bedrooms, and living areas.</p>
+    <div class="service-list">
+      <div class="service-item">
+        <h2>🏠 Home Cleaning</h2>
+        <p>Deep and regular cleaning for residential homes by trained professionals.</p>
       </div>
-      <div class="service-card">
-        <h3>BMS Services</h3>
-        <p>Expert Building Management System solutions handled by certified technicians to ensure efficiency and safety.</p>
+      <div class="service-item">
+        <h2>🏢 Building Management System (BMS)</h2>
+        <p>Automation and maintenance of electrical, HVAC, and security systems.</p>
       </div>
-      <div class="service-card">
-        <h3>Field Cleaning</h3>
-        <p>We clean large plots, outdoor areas, and construction sites using industrial-grade equipment.</p>
+      <div class="service-item">
+        <h2>🌿 Field Cleaning</h2>
+        <p>Comprehensive outdoor cleaning and maintenance for open land and gardens.</p>
       </div>
-      <div class="service-card">
-        <h3>Borewell Services</h3>
-        <p>Thorough inspection, unclogging, and cleaning of borewells to ensure fresh and uninterrupted water supply.</p>
+      <div class="service-item">
+        <h2>🚰 Borewell Cleaning</h2>
+        <p>Cleaning and restoration of borewells for better water quality and flow.</p>
       </div>
-      <div class="service-card">
-        <h3>Hall Decoration</h3>
-        <p>We provide creative and elegant decoration for weddings, birthdays, and corporate events — customized to your theme.</p>
+      <div class="service-item">
+        <h2>🎉 Hall Decoration</h2>
+        <p>Creative decoration services for functions, parties, and special events.</p>
       </div>
     </div>
   </section>
 
   <footer>
-    <p>&copy; 2025 Dustify. All rights reserved.</p>
+    &copy; 2025 Dustify. All rights reserved.
   </footer>
 
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
     AOS.init();
-    function toggleDarkMode() {
-      document.body.classList.toggle("dark-mode");
-    }
   </script>
 </body>
+
 </html>

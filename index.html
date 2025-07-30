@@ -1,96 +1,93 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dustify | Cleaning Made Simple</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dustify | Cleaning & Facility Services</title>
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    /* Inline some key styles to ensure fast load */
+    body {
+      margin: 0;
+    }
+  </style>
 </head>
 <body>
+
   <nav class="navbar">
+    <!-- Logo -->
     <div class="logo-container">
-      <img src="Logo.jpg" alt="Dustify Logo" class="logo" style="height: 50px;">
+      <a href="index.html">
+        <img src="Logo.jpg" alt="Dustify Logo" class="logo" />
+      </a>
     </div>
-  
-    <input type="checkbox" id="menu-toggle">
-    <label for="menu-toggle" class="menu-icon">&#9776;</label>
-  
+
+    <!-- Navigation toggler -->
+    <input type="checkbox" id="menu-toggle" />
+    <label for="menu-toggle" class="menu-icon">☰</label>
+
+    <!-- Book Now + Dark Mode Top Right -->
+    <div class="nav-actions">
+      <a href="booking.html" class="book-btn">Book Now</a>
+      <button class="dark-toggle" onclick="toggleDarkMode()" aria-label="Toggle dark mode">
+        <svg id="dark-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <path id="moon-icon" d="M21 12.79A9 9 0 0111.21 3a7 7 0 108.58 9.79z" fill="currentColor"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Navigation Links -->
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="services.html">Services</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
-  
-    <div class="nav-right">
-      <a href="booking.html" class="book-btn">Book Now</a>
-      <button class="dark-toggle" onclick="toggleDarkMode()">🌙</button>
-    </div>
   </nav>
-  
 
-  <header class="hero" data-aos="fade-up">
-    <h1>Cleaning Made Simple.</h1>
-    <p>Your trusted partner in home and industrial cleaning.</p>
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Welcome to Dustify</h1>
+    <p>Your trusted partner in cleaning & facility services</p>
     <a href="booking.html" class="cta-btn">Book a Service</a>
-  </header>
+  </section>
 
-  <section class="features" data-aos="fade-up">
-    <h2>Why Choose Dustify?</h2>
+  <!-- Features Section -->
+  <section>
+    <h2>Why Choose Us</h2>
     <div class="feature-grid">
       <div class="feature-card">
-        <h3>✅ Professional Staff</h3>
-        <p>Trained and verified professionals for every task.</p>
+        <h3>Trusted Professionals</h3>
+        <p>Skilled team trained for every service requirement.</p>
       </div>
       <div class="feature-card">
-        <h3>✅ Timely Service</h3>
-        <p>We value your time and provide prompt service.</p>
+        <h3>Affordable Pricing</h3>
+        <p>Transparent, competitive rates with no hidden charges.</p>
       </div>
       <div class="feature-card">
-        <h3>✅ Affordable Pricing</h3>
-        <p>Best rates in town with quality guaranteed.</p>
+        <h3>Reliable Support</h3>
+        <p>We’re available to support and serve you better.</p>
       </div>
     </div>
   </section>
 
-  <section class="services" data-aos="fade-up">
-    <h2>Our Services</h2>
-    <div class="service-grid">
-      <div class="service-card">
-        <h3>Home Cleaning</h3>
-        <p>Deep cleaning and regular cleaning solutions for every home.</p>
-      </div>
-      <div class="service-card">
-        <h3>BMS Services</h3>
-        <p>Building Management Services with skilled technicians.</p>
-      </div>
-      <div class="service-card">
-        <h3>Field Cleaning</h3>
-        <p>Cleaning for outdoor areas, plots, and construction sites.</p>
-      </div>
-      <div class="service-card">
-        <h3>Borewell Services</h3>
-        <p>Inspection, cleaning, and borewell maintenance services.</p>
-      </div>
-      <div class="service-card">
-        <h3>Hall Decoration</h3>
-        <p>Event-ready decoration services for weddings and more.</p>
-      </div>
-    </div>
-  </section>
-
+  <!-- Footer -->
   <footer>
-    <p>&copy; 2025 Dustify. All rights reserved.</p>
+    &copy; 2025 Dustify. All rights reserved.
   </footer>
 
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <!-- Dark Mode JS -->
   <script>
-    AOS.init();
-
     function toggleDarkMode() {
       document.body.classList.toggle("dark-mode");
+      const icon = document.getElementById("moon-icon");
+
+      // Switch between moon and sun
+      if (document.body.classList.contains("dark-mode")) {
+        icon.setAttribute("d", "M12 4.5V2m0 20v-2.5m7.78-10.28l1.77-1.77m-15.56 0l1.77 1.77M4.5 12H2m20 0h-2.5m-1.72 7.78l1.77 1.77m-15.56 0l1.77-1.77M12 7a5 5 0 100 10 5 5 0 000-10z");
+      } else {
+        icon.setAttribute("d", "M21 12.79A9 9 0 0111.21 3a7 7 0 108.58 9.79z");
+      }
     }
   </script>
 </body>

@@ -1,69 +1,71 @@
-<!-- about.html -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About Us | Dustify</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | Dustify</title>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle("dark-mode");
+    }
+  </script>
 </head>
+
 <body>
   <nav class="navbar">
     <div class="logo-container">
-      <img src="Logo.jpg" alt="Dustify Logo" class="logo" style="height: 50px;">
+      <img src="Logo.jpg" alt="Dustify Logo" class="logo">
     </div>
-  
-    <input type="checkbox" id="menu-toggle">
-    <label for="menu-toggle" class="menu-icon">&#9776;</label>
-  
+
+    <div class="nav-actions">
+      <a href="booking.html" class="book-btn">Book Now</a>
+      <button class="dark-toggle" onclick="toggleDarkMode()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/>
+        </svg>
+      </button>
+    </div>
+
+    <label for="menu-toggle" class="menu-icon">☰</label>
+    <input type="checkbox" id="menu-toggle" />
+
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="services.html">Services</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
-  
-    <div class="nav-right">
-      <a href="booking.html" class="book-btn">Book Now</a>
-      <button class="dark-toggle" onclick="toggleDarkMode()">🌙</button>
-    </div>
   </nav>
-  
 
   <section class="about" data-aos="fade-up">
-    <h1>About Dustify</h1>
-    <p>Dustify is a modern cleaning and facility management company dedicated to delivering exceptional services across homes and industries. With a focus on reliability, quality, and customer satisfaction, we strive to be your go-to partner for all your cleaning needs.</p>
-
-    <h2>Why Choose Us?</h2>
-    <ul>
-      <li>✔ Skilled and verified professionals</li>
-      <li>✔ Transparent and affordable pricing</li>
-      <li>✔ On-time and flexible scheduling</li>
-      <li>✔ Full range of cleaning and decoration services</li>
-    </ul>
-
-    <h2>Our Services</h2>
-    <p>We offer a variety of services including:</p>
-    <ul>
-      <li>🏠 Home Cleaning</li>
-      <li>🏢 Building Management System (BMS)</li>
-      <li>🌿 Field Cleaning</li>
-      <li>🚰 Borewell Cleaning</li>
-      <li>🎉 Hall Decoration</li>
-    </ul>
+    <h2>About Dustify</h2>
+    <p>Dustify offers professional cleaning, borewell, BMS, and decoration services with quality, trust, and customer-first approach. We're based in Bangalore and cater to homes and commercial spaces alike.</p>
+    <div class="feature-grid">
+      <div class="feature-card">
+        <h3>Experienced Team</h3>
+        <p>Our professionals are trained and skilled in various service areas to deliver top-notch quality.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Customer Satisfaction</h3>
+        <p>We strive to exceed customer expectations and ensure timely delivery of services.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Wide Range of Services</h3>
+        <p>From basic cleaning to full-scale decoration, we do it all.</p>
+      </div>
+    </div>
   </section>
 
   <footer>
-    <p>&copy; 2025 Dustify. All rights reserved.</p>
+    &copy; 2025 Dustify. All rights reserved.
   </footer>
 
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
     AOS.init();
-    function toggleDarkMode() {
-      document.body.classList.toggle("dark-mode");
-    }
   </script>
 </body>
+
 </html>

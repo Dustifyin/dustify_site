@@ -1,77 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Book a Service | Dustify</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Booking | Dustify</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
 </head>
+
 <body>
   <nav class="navbar">
     <div class="logo-container">
-      <img src="Logo.jpg" alt="Dustify Logo" class="logo" style="height: 50px;">
+      <img src="Logo.jpg" alt="Dustify Logo" class="logo" />
     </div>
-  
-    <input type="checkbox" id="menu-toggle">
-    <label for="menu-toggle" class="menu-icon">&#9776;</label>
-  
+
+    <div class="nav-actions">
+      <a href="booking.html" class="book-btn">Book Now</a>
+      <button class="dark-toggle" onclick="toggleDarkMode()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/>
+        </svg>
+      </button>
+    </div>
+
+    <label for="menu-toggle" class="menu-icon">☰</label>
+    <input type="checkbox" id="menu-toggle" />
+
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="services.html">Services</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
-  
-    <div class="nav-right">
-      <a href="booking.html" class="book-btn">Book Now</a>
-      <button class="dark-toggle" onclick="toggleDarkMode()">🌙</button>
-    </div>
   </nav>
-  
 
-  <section class="booking-section" data-aos="fade-up">
-    <h2>Book a Service</h2>
-    <p>Fill out the form below and our team will contact you shortly.</p>
+  <section class="contact" data-aos="fade-up">
+    <h1>Book a Service</h1>
+    <p>Please fill out the form below to book your desired service. We'll contact you to confirm the details.</p>
 
-    <form action="https://formsubmit.co/shreenivasaenterprises1328@gmail.com" method="POST" class="booking-form">
-      <!-- FormSubmit hidden fields -->
+    <form action="https://formsubmit.co/shreenivasaenterprises1328@gmail.com" method="POST" class="contact-form">
       <input type="hidden" name="_captcha" value="false">
       <input type="hidden" name="_template" value="table">
-      <input type="hidden" name="_autoresponse" value="Thank you for booking with Dustify. We will confirm your request soon.">
-      <input type="hidden" name="_next" value="https://yourdomain.com/thankyou.html">
-
-      <input type="text" name="name" placeholder="Your Full Name" required />
-      <input type="email" name="email" placeholder="Your Email Address" required />
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
       <input type="tel" name="phone" placeholder="Your Phone Number" required />
-      <input type="text" name="address" placeholder="Service Address" required />
-      
-      <select name="service" required>
-        <option value="" disabled selected>Select Service</option>
-        <option value="Home Cleaning">Home Cleaning</option>
-        <option value="BMS Services">BMS Services</option>
-        <option value="Field Cleaning">Field Cleaning</option>
-        <option value="Borewell Services">Borewell Services</option>
-        <option value="Hall Decoration">Hall Decoration</option>
-      </select>
-
-      <input type="date" name="preferred_date" required />
-      <textarea name="notes" placeholder="Additional Notes (Optional)" rows="4"></textarea>
-      <button type="submit">Submit Booking</button>
+      <input type="text" name="service" placeholder="Service Needed (e.g., Home Cleaning)" required />
+      <input type="text" name="address" placeholder="Your Address" required />
+      <textarea name="notes" rows="5" placeholder="Any special instructions?"></textarea>
+      <button type="submit" class="submit-btn">Book Now</button>
     </form>
   </section>
 
   <footer>
-    <p>&copy; 2025 Dustify. All rights reserved.</p>
+    &copy; 2025 Dustify. All rights reserved.
   </footer>
 
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
     AOS.init();
-
     function toggleDarkMode() {
       document.body.classList.toggle("dark-mode");
     }
   </script>
 </body>
+
 </html>

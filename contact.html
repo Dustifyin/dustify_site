@@ -1,64 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact Us | Dustify</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact | Dustify</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
 </head>
+
 <body>
   <nav class="navbar">
     <div class="logo-container">
-      <img src="Logo.jpg" alt="Dustify Logo" class="logo" style="height: 50px;">
+      <img src="Logo.jpg" alt="Dustify Logo" class="logo" />
     </div>
-  
-    <input type="checkbox" id="menu-toggle">
-    <label for="menu-toggle" class="menu-icon">&#9776;</label>
-  
+
+    <div class="nav-actions">
+      <a href="booking.html" class="book-btn">Book Now</a>
+      <button class="dark-toggle" onclick="toggleDarkMode()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/>
+        </svg>
+      </button>
+    </div>
+
+    <label for="menu-toggle" class="menu-icon">☰</label>
+    <input type="checkbox" id="menu-toggle" />
+
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="services.html">Services</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
-  
-    <div class="nav-right">
-      <a href="booking.html" class="book-btn">Book Now</a>
-      <button class="dark-toggle" onclick="toggleDarkMode()">🌙</button>
-    </div>
   </nav>
-  
 
-  <section class="contact-section" data-aos="fade-up">
-    <h2>Contact Us</h2>
-    <p>We’re here to help! Reach out with any questions, suggestions, or service requests.</p>
-    
+  <section class="contact" data-aos="fade-up">
+    <h1>Contact Us</h1>
+    <p>We're happy to assist you. Please fill out the form below and we'll get back to you shortly.</p>
+
     <form action="https://formsubmit.co/shreenivasaenterprises1328@gmail.com" method="POST" class="contact-form">
-      <!-- FormSubmit hidden fields -->
       <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_template" value="box">
-      <input type="hidden" name="_autoresponse" value="Thank you for contacting Dustify. We will respond shortly.">
-      <input type="hidden" name="_next" value="https://yourdomain.com/thankyou.html">
-
+      <input type="hidden" name="_template" value="table">
       <input type="text" name="name" placeholder="Your Name" required />
       <input type="email" name="email" placeholder="Your Email" required />
-      <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-      <button type="submit">Send Message</button>
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit" class="submit-btn">Send Message</button>
     </form>
   </section>
 
   <footer>
-    <p>&copy; 2025 Dustify. All rights reserved.</p>
+    &copy; 2025 Dustify. All rights reserved.
   </footer>
 
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
     AOS.init();
-
     function toggleDarkMode() {
       document.body.classList.toggle("dark-mode");
     }
   </script>
 </body>
+
 </html>
