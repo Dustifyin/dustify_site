@@ -2,60 +2,57 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact Us - Dustify</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us | Dustify</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
-  <header>
-    <div class="container">
-      <h1>Dustify</h1>
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="booking.html">Booking</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html" class="active">Contact</a></li>
-        </ul>
-      </nav>
+  <nav class="navbar">
+    <div class="logo-container">
+      <img src="Dustify Cleaning Service Logo Design.png" alt="Dustify Logo" class="logo" />
     </div>
-  </header>
-
-  <section class="contact-section">
-    <div class="container">
-      <h2>Contact Us</h2>
-      <p>We're here to help! Reach out for bookings, quotes or any inquiries.</p>
-
-      <div class="contact-info">
-        <p><strong>WhatsApp:</strong> <a href="https://wa.me/917483810902" target="_blank">+91 74838 10902</a></p>
-        <p><strong>Email:</strong> <a href="mailto:shreenivasaenterprises1328@gmail.com">shreenivasaenterprises1328@gmail.com</a></p>
-        <p><strong>Address:</strong> Laxmipura Village, Bannerghatta Rd, Bangalore 560083</p>
-        <p><strong>GST No:</strong> 29BHEPV3339R1ZC</p>
-      </div>
-
-      <form action="https://formspree.io/f/your-form-id" method="POST" class="contact-form">
-        <label for="name">Name:</label>
-        <input type="text" name="name" id="name" required>
-
-        <label for="email">Email:</label>
-        <input type="email" name="email" id="email" required>
-
-        <label for="message">Message:</label>
-        <textarea name="message" id="message" rows="5" required></textarea>
-
-        <button type="submit">Send Message</button>
-      </form>
-
-      <p class="form-note">* This form is powered by <a href="https://formspree.io/" target="_blank">Formspree</a>. Replace your-form-id with your actual ID.</p>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="booking.html" class="book-btn">Book Now</a>
+      <button class="dark-toggle" onclick="toggleDarkMode()">🌙</button>
     </div>
+  </nav>
+
+  <section class="contact-section" data-aos="fade-up">
+    <h2>Contact Us</h2>
+    <p>We’re here to help! Reach out with any questions, suggestions, or service requests.</p>
+    
+    <form action="https://formsubmit.co/shreenivasaenterprises1328@gmail.com" method="POST" class="contact-form">
+      <!-- FormSubmit hidden fields -->
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="box">
+      <input type="hidden" name="_autoresponse" value="Thank you for contacting Dustify. We will respond shortly.">
+      <input type="hidden" name="_next" value="https://yourdomain.com/thankyou.html">
+
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
   </section>
 
   <footer>
-    <div class="container">
-      <p>© 2025 Dustify | All rights reserved.</p>
-    </div>
+    <p>&copy; 2025 Dustify. All rights reserved.</p>
   </footer>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+
+    function toggleDarkMode() {
+      document.body.classList.toggle("dark-mode");
+    }
+  </script>
 </body>
 </html>
-

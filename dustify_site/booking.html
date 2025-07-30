@@ -1,92 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Booking | Dustify</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f4f6f8;
-      margin: 0;
-      padding: 20px;
-    }
-
-    .booking-form {
-      background: #fff;
-      max-width: 500px;
-      margin: auto;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.1);
-    }
-
-    .booking-form h2 {
-      margin-bottom: 20px;
-      color: #333;
-      text-align: center;
-    }
-
-    .booking-form input,
-    .booking-form select,
-    .booking-form textarea {
-      width: 100%;
-      padding: 10px;
-      margin: 10px 0 15px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
-
-    .booking-form button {
-      width: 100%;
-      padding: 12px;
-      background-color: #00aaff;
-      border: none;
-      color: white;
-      font-size: 16px;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-    .booking-form button:hover {
-      background-color: #0077cc;
-    }
-
-    .popup {
-      display: none;
-      text-align: center;
-      background: #dff0d8;
-      color: #3c763d;
-      padding: 15px;
-      border-radius: 5px;
-      margin-top: 15px;
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book a Service | Dustify</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
+  <nav class="navbar">
+    <div class="logo-container">
+      <img src="Dustify Cleaning Service Logo Design.png" alt="Dustify Logo" class="logo" />
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="booking.html" class="book-btn active">Book Now</a>
+      <button class="dark-toggle" onclick="toggleDarkMode()">🌙</button>
+    </div>
+  </nav>
 
-  <div class="booking-form">
+  <section class="booking-section" data-aos="fade-up">
     <h2>Book a Service</h2>
+    <p>Fill out the form below and our team will contact you shortly.</p>
 
-    <form action="https://formsubmit.co/shreenivasaenterprises1328@gmail.com" method="POST" target="dummy-frame" onsubmit="showPopup(event)">
-      <!-- Disable captcha -->
+    <form action="https://formsubmit.co/shreenivasaenterprises1328@gmail.com" method="POST" class="booking-form">
+      <!-- FormSubmit hidden fields -->
       <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_autoresponse" value="Thank you for booking with Dustify. We will confirm your request soon.">
+      <input type="hidden" name="_next" value="https://yourdomain.com/thankyou.html">
+
+      <input type="text" name="name" placeholder="Your Full Name" required />
+      <input type="email" name="email" placeholder="Your Email Address" required />
+      <input type="tel" name="phone" placeholder="Your Phone Number" required />
+      <input type="text" name="address" placeholder="Service Address" required />
       
-      <!-- Optional redirect after submit (update if needed) -->
-      <!-- <input type="hidden" name="_next" value="https://dustifyin.github.io/dustify_site/thankyou.html"> -->
-
-      <label for="name">Full Name</label>
-      <input type="text" id="name" name="name" required>
-
-      <label for="email">Email Address</label>
-      <input type="email" id="email" name="email" required>
-
-      <label for="phone">Phone Number</label>
-      <input type="tel" id="phone" name="phone" required>
-
-      <label for="service">Select Service</label>
-      <select id="service" name="service" required>
-        <option value="">-- Choose a service --</option>
+      <select name="service" required>
+        <option value="" disabled selected>Select Service</option>
         <option value="Home Cleaning">Home Cleaning</option>
         <option value="BMS Services">BMS Services</option>
         <option value="Field Cleaning">Field Cleaning</option>
@@ -94,29 +49,23 @@
         <option value="Hall Decoration">Hall Decoration</option>
       </select>
 
-      <label for="date">Preferred Date</label>
-      <input type="date" id="date" name="date" required>
-
-      <label for="address">Service Location</label>
-      <textarea id="address" name="address" rows="3" required></textarea>
-
-      <button type="submit">Book Now</button>
+      <input type="date" name="preferred_date" required />
+      <textarea name="notes" placeholder="Additional Notes (Optional)" rows="4"></textarea>
+      <button type="submit">Submit Booking</button>
     </form>
+  </section>
 
-    <div id="popup" class="popup">
-      ✅ Thank you! Your booking has been received.
-    </div>
+  <footer>
+    <p>&copy; 2025 Dustify. All rights reserved.</p>
+  </footer>
 
-    <iframe name="dummy-frame" style="display:none;"></iframe>
-  </div>
-
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
-    function showPopup(event) {
-      setTimeout(() => {
-        document.getElementById("popup").style.display = "block";
-      }, 1000);
+    AOS.init();
+
+    function toggleDarkMode() {
+      document.body.classList.toggle("dark-mode");
     }
   </script>
-
 </body>
 </html>

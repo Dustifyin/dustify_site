@@ -1,53 +1,63 @@
+<!-- about.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>About Us - Dustify</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us | Dustify</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
-  <header>
-    <div class="container">
-      <h1>Dustify</h1>
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="booking.html">Booking</a></li>
-          <li><a href="about.html" class="active">About</a></li>
-        </ul>
-      </nav>
+  <nav class="navbar">
+    <div class="logo-container">
+      <img src="Dustify Cleaning Service Logo Design.png" alt="Dustify Logo" class="logo" />
     </div>
-  </header>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="booking.html" class="book-btn">Book Now</a>
+      <button class="dark-toggle" onclick="toggleDarkMode()">🌙</button>
+    </div>
+  </nav>
 
-  <section class="about-section">
-    <div class="container">
-      <h2>About Us</h2>
-      <p>
-        At <strong>Dustify</strong>, we believe cleanliness is not just a service—it's a commitment to better living.
-        Founded with a mission to simplify maintenance services under one roof, Dustify is your trusted partner for:
-      </p>
-      <ul>
-        <li>✅ Home & Office Cleaning</li>
-        <li>✅ BMS (Building Management System) Solutions</li>
-        <li>✅ Outdoor & Field Cleaning</li>
-        <li>✅ Borewell Services</li>
-        <li>✅ Event & Hall Decoration</li>
-      </ul>
-      <p>
-        Our team is trained, experienced, and fully equipped to take care of everything from deep cleaning your apartment to managing fire safety systems in large buildings. Whether it's a one-time job or ongoing maintenance, we’re ready to deliver.
-      </p>
-      <p>
-        Contact us at <a href="mailto:shreenivasaenterprises1328@gmail.com">shreenivasaenterprises1328@gmail.com</a> or WhatsApp us directly at <a href="https://wa.me/917483810902">7483810902</a>.
-      </p>
-    </div>
+  <section class="about" data-aos="fade-up">
+    <h1>About Dustify</h1>
+    <p>Dustify is a modern cleaning and facility management company dedicated to delivering exceptional services across homes and industries. With a focus on reliability, quality, and customer satisfaction, we strive to be your go-to partner for all your cleaning needs.</p>
+
+    <h2>Why Choose Us?</h2>
+    <ul>
+      <li>✔ Skilled and verified professionals</li>
+      <li>✔ Transparent and affordable pricing</li>
+      <li>✔ On-time and flexible scheduling</li>
+      <li>✔ Full range of cleaning and decoration services</li>
+    </ul>
+
+    <h2>Our Services</h2>
+    <p>We offer a variety of services including:</p>
+    <ul>
+      <li>🏠 Home Cleaning</li>
+      <li>🏢 Building Management System (BMS)</li>
+      <li>🌿 Field Cleaning</li>
+      <li>🚰 Borewell Cleaning</li>
+      <li>🎉 Hall Decoration</li>
+    </ul>
   </section>
 
   <footer>
-    <div class="container">
-      <p>© 2025 Dustify | Designed for Clean Living.</p>
-    </div>
+    <p>&copy; 2025 Dustify. All rights reserved.</p>
   </footer>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+    function toggleDarkMode() {
+      document.body.classList.toggle("dark-mode");
+    }
+  </script>
 </body>
 </html>
