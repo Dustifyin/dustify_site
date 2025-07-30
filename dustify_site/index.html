@@ -1,22 +1,22 @@
-<!-- services.html -->
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Services | Dustify</title>
+  <title>Dustify | Cleaning Made Simple</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
   <nav class="navbar">
     <div class="logo-container">
-      <img src="Dustify Cleaning Service Logo Design.png" alt="Dustify Logo" class="logo" />
+      <img src="logo1.png" alt="Dustify Logo" class="logo" />
     </div>
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About</a></li>
-      <li><a href="services.html" class="active">Services</a></li>
+      <li><a href="services.html">Services</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
     <div class="nav-right">
@@ -25,28 +25,52 @@
     </div>
   </nav>
 
-  <section class="service-section" data-aos="fade-up">
-    <h1>Our Services</h1>
+  <header class="hero" data-aos="fade-up">
+    <h1>Cleaning Made Simple.</h1>
+    <p>Your trusted partner in home and industrial cleaning.</p>
+    <a href="booking.html" class="cta-btn">Book a Service</a>
+  </header>
+
+  <section class="features" data-aos="fade-up">
+    <h2>Why Choose Dustify?</h2>
+    <div class="feature-grid">
+      <div class="feature-card">
+        <h3>✅ Professional Staff</h3>
+        <p>Trained and verified professionals for every task.</p>
+      </div>
+      <div class="feature-card">
+        <h3>✅ Timely Service</h3>
+        <p>We value your time and provide prompt service.</p>
+      </div>
+      <div class="feature-card">
+        <h3>✅ Affordable Pricing</h3>
+        <p>Best rates in town with quality guaranteed.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="services" data-aos="fade-up">
+    <h2>Our Services</h2>
     <div class="service-grid">
       <div class="service-card">
         <h3>Home Cleaning</h3>
-        <p>We provide deep cleaning and regular maintenance for homes, including kitchens, bathrooms, bedrooms, and living areas.</p>
+        <p>Deep cleaning and regular cleaning solutions for every home.</p>
       </div>
       <div class="service-card">
         <h3>BMS Services</h3>
-        <p>Expert Building Management System solutions handled by certified technicians to ensure efficiency and safety.</p>
+        <p>Building Management Services with skilled technicians.</p>
       </div>
       <div class="service-card">
         <h3>Field Cleaning</h3>
-        <p>We clean large plots, outdoor areas, and construction sites using industrial-grade equipment.</p>
+        <p>Cleaning for outdoor areas, plots, and construction sites.</p>
       </div>
       <div class="service-card">
         <h3>Borewell Services</h3>
-        <p>Thorough inspection, unclogging, and cleaning of borewells to ensure fresh and uninterrupted water supply.</p>
+        <p>Inspection, cleaning, and borewell maintenance services.</p>
       </div>
       <div class="service-card">
         <h3>Hall Decoration</h3>
-        <p>We provide creative and elegant decoration for weddings, birthdays, and corporate events — customized to your theme.</p>
+        <p>Event-ready decoration services for weddings and more.</p>
       </div>
     </div>
   </section>
@@ -58,6 +82,7 @@
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
     AOS.init();
+
     function toggleDarkMode() {
       document.body.classList.toggle("dark-mode");
     }
