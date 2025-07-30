@@ -230,3 +230,43 @@ footer {
     flex-direction: row-reverse;
   }
 }
+/* Hamburger icon */
+.menu-icon {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+  padding: 10px;
+}
+
+/* Hide checkbox input */
+#menu-toggle {
+  display: none;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #ffffff;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+    z-index: 999;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+  }
+
+  #menu-toggle:checked + .menu-icon + .nav-links {
+    display: flex;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .nav-right {
+    display: none;
+  }
+}
