@@ -15,7 +15,7 @@ body {
   color: #333;
   line-height: 1.6;
   transition: background 0.3s, color 0.3s;
-  padding-top: 60px; /* prevent content hiding behind nav */
+  padding-top: 60px;
 }
 
 /* Dark Mode */
@@ -173,7 +173,7 @@ section p, ul {
   margin-bottom: 6px;
 }
 
-/* Services Grid (optional if cards used) */
+/* Services Grid */
 .services-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -257,52 +257,8 @@ footer {
     padding: 15px;
   }
 }
-.whatsapp-float {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 100;
-  display: flex;
-  align-items: center;
-  background-color: #25d366;
-  color: white;
-  border-radius: 25px;
-  padding: 8px 12px;
-  text-decoration: none;
-  transition: transform 0.2s ease-in-out;
-}
 
-.whatsapp-float img {
-  width: 32px;
-  height: 32px;
-  margin-right: 8px;
-}
-
-.whatsapp-label {
-  font-size: 14px;
-  font-weight: 500;
-  white-space: nowrap;
-}
-
-.whatsapp-float:hover {
-  transform: scale(1.05);
-}
-
-/* Optional: hide text on small mobile screens */
-@media (max-width: 500px) {
-  .whatsapp-label {
-    display: none;
-  }
-
-  .whatsapp-float {
-    padding: 6px;
-    border-radius: 50%;
-  }
-
-  .whatsapp-float img {
-    margin: 0;
-  }
-}
+/* WhatsApp Floating Button */
 .whatsapp-float {
   position: fixed;
   bottom: 20px;
@@ -325,16 +281,26 @@ footer {
   margin-right: 8px;
 }
 
-.whatsapp-text {
+.whatsapp-label {
   font-size: 14px;
   font-weight: bold;
 }
 
 @media screen and (max-width: 600px) {
-  .whatsapp-text {
+  .whatsapp-label {
     display: none;
   }
+
+  .whatsapp-float {
+    padding: 6px;
+    border-radius: 50%;
+  }
+
+  .whatsapp-float img {
+    margin: 0;
+  }
 }
+
 /* Desktop Navbar Fix */
 @media (min-width: 768px) {
   .navbar {
@@ -374,7 +340,7 @@ footer {
     font-size: 1rem;
     font-weight: 500;
     text-decoration: none;
-    color: var(--text-color);
+    color: #333;
     padding: 10px;
     transition: 0.3s ease;
   }
