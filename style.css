@@ -200,3 +200,25 @@ footer {
   color: #f0f0f0;
   border: 1px solid #444;
 }
+.who-we-are {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 0 20px;
+  line-height: 1.7;
+}
+
+.who-we-are h2, .who-we-are h3 {
+  margin-top: 20px;
+  color: var(--primary-color);
+}
+
+.core-values {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 10px;
+}
+
+.core-values li {
+  margin: 6px 0;
+  font-weight: 500;
+}
