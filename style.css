@@ -3,7 +3,6 @@ body {
   font-family: 'Segoe UI', sans-serif;
   margin: 0;
   padding: 0;
-  line-height: 1.6;
   background: #f9f9f9;
   color: #333;
   transition: background 0.3s, color 0.3s;
@@ -41,6 +40,7 @@ button, input, select, textarea {
   position: sticky;
   top: 0;
   z-index: 1000;
+  flex-wrap: wrap;
 }
 
 .logo {
@@ -51,10 +51,11 @@ button, input, select, textarea {
   list-style: none;
   display: flex;
   gap: 24px;
+  transition: max-height 0.3s ease, opacity 0.3s ease;
 }
 
 .nav-links li {
-  padding: 10px;
+  list-style: none;
 }
 
 .nav-links a {
@@ -221,7 +222,7 @@ footer {
   background: #1a1a1a;
 }
 
-/* Hamburger Menu */
+/* Responsive Navigation */
 .menu-icon {
   display: none;
   font-size: 26px;
@@ -229,13 +230,16 @@ footer {
   padding: 10px;
 }
 
-/* Hide checkbox */
+/* Hide checkbox input */
 #menu-toggle {
   display: none;
 }
 
-/* Responsive Styling */
 @media (max-width: 768px) {
+  .menu-icon {
+    display: block;
+  }
+
   .nav-links {
     display: none;
     flex-direction: column;
@@ -244,20 +248,38 @@ footer {
     top: 60px;
     left: 0;
     width: 100%;
-    padding: 10px 0;
-    z-index: 999;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+    transition: max-height 0.4s ease, opacity 0.4s ease;
   }
 
   #menu-toggle:checked ~ .nav-links {
     display: flex;
+    opacity: 1;
+    max-height: 500px;
+    z-index: 999;
   }
 
-  .menu-icon {
-    display: block;
+  .nav-links li {
+    padding: 12px 0;
+    text-align: center;
+    width: 100%;
+  }
+
+  .nav-links li::before {
+    content: none;
   }
 
   .nav-right {
-    display: none;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .nav-right .book-btn {
+    margin-left: 0;
   }
 }
