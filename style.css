@@ -53,6 +53,10 @@ button, input, select, textarea {
   gap: 24px;
 }
 
+.nav-links li {
+  padding: 10px;
+}
+
 .nav-links a {
   color: #333;
   font-weight: 500;
@@ -75,10 +79,6 @@ button, input, select, textarea {
 
 .book-btn:hover {
   background: #0056b3;
-}
-
-.book-btn.active {
-  background: #28a745;
 }
 
 .dark-toggle {
@@ -221,16 +221,7 @@ footer {
   background: #1a1a1a;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .nav-links {
-    display: none;
-  }
-  .nav-right {
-    flex-direction: row-reverse;
-  }
-}
-/* Hamburger icon */
+/* Hamburger Menu */
 .menu-icon {
   display: none;
   font-size: 26px;
@@ -238,12 +229,12 @@ footer {
   padding: 10px;
 }
 
-/* Hide checkbox input */
+/* Hide checkbox */
 #menu-toggle {
   display: none;
 }
 
-/* Responsive styling */
+/* Responsive Styling */
 @media (max-width: 768px) {
   .nav-links {
     display: none;
@@ -258,7 +249,7 @@ footer {
     box-shadow: 0 2px 5px rgba(0,0,0,0.15);
   }
 
-  #menu-toggle:checked + .menu-icon + .nav-links {
+  #menu-toggle:checked ~ .nav-links {
     display: flex;
   }
 
