@@ -1,19 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Contact | Dustify</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle("dark-mode");
+    }
+  </script>
 </head>
-
 <body>
+  <!-- Navbar -->
   <nav class="navbar">
     <div class="logo-container">
       <img src="Logo.jpg" alt="Dustify Logo" class="logo" />
-
     </div>
 
     <div class="nav-actions">
@@ -28,7 +31,6 @@
 
     <label for="menu-toggle" class="menu-icon">☰</label>
     <input type="checkbox" id="menu-toggle" />
-
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About</a></li>
@@ -37,31 +39,37 @@
     </ul>
   </nav>
 
+  <!-- Contact Section -->
   <section class="contact" data-aos="fade-up">
-    <h1>Contact Us</h1>
-    <p>We're happy to assist you. Please fill out the form below and we'll get back to you shortly.</p>
+    <h2>Contact Us</h2>
+    <p>We'd love to hear from you! Please fill out the form below and we'll get in touch soon.</p>
 
     <form action="https://formsubmit.co/shreenivasaenterprises1328@gmail.com" method="POST" class="contact-form">
       <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_template" value="box">
       <input type="text" name="name" placeholder="Your Name" required />
       <input type="email" name="email" placeholder="Your Email" required />
-      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <input type="tel" name="phone" placeholder="Your Phone Number" />
+      <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
       <button type="submit" class="submit-btn">Send Message</button>
     </form>
   </section>
 
+  <!-- WhatsApp Chat Button -->
+  <a href="https://wa.me/917483810902" class="whatsapp-float" target="_blank">
+    <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="WhatsApp" />
+    <span class="whatsapp-text">Chat with us</span>
+  </a>
+
+  <!-- Footer -->
   <footer>
     &copy; 2025 Dustify. All rights reserved.
   </footer>
 
+  <!-- Scripts -->
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
     AOS.init();
-    function toggleDarkMode() {
-      document.body.classList.toggle("dark-mode");
-    }
   </script>
 </body>
-
 </html>
