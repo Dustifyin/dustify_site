@@ -2,52 +2,63 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Book a Service | Dustify</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <nav class="navbar">
-    <div class="logo-container">
-      <img src="Logo.jpg" alt="Dustify Logo" class="logo" />
-    </div>
-    <div class="nav-actions">
-      <a href="booking.html" class="book-btn">Book Now</a>
-    </div>
-    <label for="menu-toggle" class="menu-icon">☰</label>
-    <input type="checkbox" id="menu-toggle" />
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
 
-  <main class="form-container">
-    <h2>Book a Service</h2>
-    <form action="https://formsubmit.co/shreenivasaenterprises1328@gmail.com" method="POST">
-      <input type="text" name="name" placeholder="Full Name" required />
-      <input type="email" name="email" placeholder="Email Address" required />
-      <input type="tel" name="phone" placeholder="Phone Number" required />
-      <select name="service" required>
-        <option value="">-- Choose a service --</option>
-        <option value="Home Cleaning">Home Cleaning</option>
-        <option value="BMS">BMS (Building Management System)</option>
-        <option value="Field Cleaning">Field Cleaning</option>
-        <option value="Borewell Services">Borewell Services</option>
-        <option value="Event Management">Event Management</option>
-        <option value="Car Service">Car Service</option>
-      </select>
-      <input type="date" name="preferred_date" required />
-      <textarea name="location" rows="3" placeholder="Service Location" required></textarea>
-      <button type="submit" class="submit-btn">Book Now</button>
-    </form>
-  </main>
+  <!-- Navigation Bar (Unchanged) -->
+  <header>
+    <nav class="navbar">
+      <div class="container nav-container">
+        <a href="index.html" class="logo"><img src="logo.png" alt="Dustify Logo" /></a>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="booking.html" class="btn-book">Book Now</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
 
-  <!-- WhatsApp Chat Button -->
-  <a href="https://wa.me/917483810902" class="whatsapp-float" target="_blank" title="Chat with us">
-    <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="WhatsApp Chat" />
-  </a>
+  <!-- Booking Form Section -->
+  <section class="form-section">
+    <div class="form-container">
+      <h2>Book a Service</h2>
+      <form action="https://formsubmit.co/shreenivasaenterprises1328@gmail.com" method="POST">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" required />
+
+        <label for="service">Select Service</label>
+        <select id="service" name="service" required>
+          <option value="">-- Choose a service --</option>
+          <option value="Home Cleaning">Home Cleaning</option>
+          <option value="BMS Services">BMS Services</option>
+          <option value="Field Cleaning">Field Cleaning</option>
+          <option value="Borewell Services">Borewell Services</option>
+          <option value="Event Management">Event Management</option>
+          <option value="Car Service">Car Service</option>
+        </select>
+
+        <label for="date">Preferred Date</label>
+        <input type="date" id="date" name="date" required />
+
+        <label for="location">Service Location</label>
+        <textarea id="location" name="location" rows="3" required></textarea>
+
+        <button type="submit" class="btn-submit">Book Now</button>
+      </form>
+    </div>
+  </section>
+
 </body>
 </html>
