@@ -5,8 +5,89 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Contact | Dustify</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    .form-section {
+      padding: 100px 20px 40px;
+      background-color: #f9f9f9;
+      min-height: 100vh;
+    }
+
+    .form-container {
+      max-width: 500px;
+      margin: auto;
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+    }
+
+    .form-container h2 {
+      text-align: center;
+      margin-bottom: 25px;
+      color: #333;
+    }
+
+    form input,
+    form textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 18px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 15px;
+      background-color: #fefefe;
+    }
+
+    form input:focus,
+    form textarea:focus {
+      border-color: #007bff;
+      outline: none;
+      box-shadow: 0 0 3px rgba(0, 123, 255, 0.4);
+    }
+
+    .submit-btn {
+      width: 100%;
+      padding: 12px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .submit-btn:hover {
+      background-color: #0056cc;
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 1000;
+    }
+
+    .whatsapp-float img {
+      width: 50px;
+      height: 50px;
+    }
+
+    @media (max-width: 600px) {
+      .form-container {
+        padding: 20px;
+      }
+
+      .form-container h2 {
+        font-size: 1.4rem;
+      }
+    }
+  </style>
 </head>
 <body>
+
+  <!-- Navigation Bar (Unchanged) -->
   <nav class="navbar">
     <div class="logo-container">
       <img src="Logo.jpg" alt="Dustify Logo" class="logo" />
@@ -24,20 +105,24 @@
     </ul>
   </nav>
 
-  <main class="form-container">
-    <h2>Contact Us</h2>
-    <form action="https://formsubmit.co/shreenivasaenterprises1328@gmail.com" method="POST">
-      <input type="text" name="name" placeholder="Full Name" required />
-      <input type="email" name="email" placeholder="Email Address" required />
-      <input type="tel" name="phone" placeholder="Phone Number" required />
-      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-      <button type="submit" class="submit-btn">Send Message</button>
-    </form>
-  </main>
+  <!-- Contact Form Section -->
+  <section class="form-section">
+    <div class="form-container">
+      <h2>Contact Us</h2>
+      <form action="https://formsubmit.co/shreenivasaenterprises1328@gmail.com" method="POST">
+        <input type="text" name="name" placeholder="Full Name" required />
+        <input type="email" name="email" placeholder="Email Address" required />
+        <input type="tel" name="phone" placeholder="Phone Number" required />
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit" class="submit-btn">Send Message</button>
+      </form>
+    </div>
+  </section>
 
   <!-- WhatsApp Chat Button -->
   <a href="https://wa.me/917483810902" class="whatsapp-float" target="_blank" title="Chat with us">
     <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="WhatsApp Chat" />
   </a>
+
 </body>
 </html>
