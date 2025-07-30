@@ -2,17 +2,95 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Book a Service | Dustify</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    .form-section {
+      padding: 100px 20px 40px;
+      background-color: #f9f9f9;
+      min-height: 100vh;
+    }
+
+    .form-container {
+      max-width: 500px;
+      margin: auto;
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+    }
+
+    .form-container h2 {
+      text-align: center;
+      margin-bottom: 25px;
+      color: #333;
+    }
+
+    form label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 600;
+      color: #444;
+    }
+
+    form input,
+    form select,
+    form textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 18px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 15px;
+      background-color: #fefefe;
+    }
+
+    form input:focus,
+    form select:focus,
+    form textarea:focus {
+      border-color: #007bff;
+      outline: none;
+      box-shadow: 0 0 3px rgba(0, 123, 255, 0.4);
+    }
+
+    .btn-submit {
+      width: 100%;
+      padding: 12px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-submit:hover {
+      background-color: #0056cc;
+    }
+
+    @media (max-width: 600px) {
+      .form-container {
+        padding: 20px;
+      }
+
+      .form-container h2 {
+        font-size: 1.4rem;
+      }
+    }
+  </style>
 </head>
 <body>
 
-  <!-- Navigation Bar (Unchanged) -->
+  <!-- Navigation Bar (unchanged) -->
   <header>
     <nav class="navbar">
       <div class="container nav-container">
-        <a href="index.html" class="logo"><img src="Logo.jpg" alt="Dustify Logo" /></a>
+        <a href="index.html" class="logo">
+          <img src="Logo.jpg" alt="Dustify Logo" />
+        </a>
         <ul class="nav-links">
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
@@ -28,7 +106,7 @@
   <section class="form-section">
     <div class="form-container">
       <h2>Book a Service</h2>
-      <form action="https://formsubmit.co/your-email@example.com" method="POST">
+      <form action="https://formsubmit.co/shreenivasaenterprises1328@gmail.com" method="POST">
         <label for="name">Full Name</label>
         <input type="text" id="name" name="name" required />
 
