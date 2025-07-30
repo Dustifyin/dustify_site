@@ -3,25 +3,31 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Booking | Dustify</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle("dark-mode");
+    }
+  </script>
 </head>
 
 <body>
+  <!-- Navigation -->
   <nav class="navbar">
     <div class="logo-container">
       <img src="Logo.jpg" alt="Dustify Logo" class="logo" />
-
     </div>
 
     <div class="nav-actions">
       <a href="booking.html" class="book-btn">Book Now</a>
       <button class="dark-toggle" onclick="toggleDarkMode()">
-        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
-          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/>
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"
+          fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round">
+          <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" />
         </svg>
       </button>
     </div>
@@ -37,34 +43,42 @@
     </ul>
   </nav>
 
-  <section class="contact" data-aos="fade-up">
-    <h1>Book a Service</h1>
-    <p>Please fill out the form below to book your desired service. We'll contact you to confirm the details.</p>
-
+  <!-- Booking Section -->
+  <section class="booking" data-aos="fade-up">
+    <h2>Book a Service</h2>
+    <p>Fill out the form below to schedule a service with Dustify.</p>
     <form action="https://formsubmit.co/shreenivasaenterprises1328@gmail.com" method="POST" class="contact-form">
-      <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_template" value="table">
       <input type="text" name="name" placeholder="Your Name" required />
       <input type="email" name="email" placeholder="Your Email" required />
-      <input type="tel" name="phone" placeholder="Your Phone Number" required />
-      <input type="text" name="service" placeholder="Service Needed (e.g., Home Cleaning)" required />
-      <input type="text" name="address" placeholder="Your Address" required />
-      <textarea name="notes" rows="5" placeholder="Any special instructions?"></textarea>
-      <button type="submit" class="submit-btn">Book Now</button>
+      <input type="tel" name="phone" placeholder="Phone Number" required />
+      <select name="service" required>
+        <option value="">Select a Service</option>
+        <option value="Home Cleaning">Home Cleaning</option>
+        <option value="BMS Services">BMS Services</option>
+        <option value="Borewell Services">Borewell Services</option>
+        <option value="Field Cleaning">Field Cleaning</option>
+        <option value="Event Management">Event Management</option>
+        <option value="Car Service">Car Service</option>
+      </select>
+      <input type="date" name="date" required />
+      <textarea name="message" rows="5" placeholder="Additional Instructions (optional)"></textarea>
+      <button type="submit">Book Now</button>
     </form>
   </section>
+
+  <!-- WhatsApp Chat Button -->
+  <a href="https://wa.me/917483810902?text=Hi%20Dustify%2C%20I%20want%20to%20book%20a%20service."
+     class="whatsapp-chat" target="_blank">
+    <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="Chat with us on WhatsApp" />
+    <span class="chat-preview">Chat with us</span>
+  </a>
 
   <footer>
     &copy; 2025 Dustify. All rights reserved.
   </footer>
 
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <script>
-    AOS.init();
-    function toggleDarkMode() {
-      document.body.classList.toggle("dark-mode");
-    }
-  </script>
+  <script>AOS.init();</script>
 </body>
 
 </html>

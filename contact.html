@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact | Dustify</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <script>
     function toggleDarkMode() {
       document.body.classList.toggle("dark-mode");
     }
   </script>
 </head>
+
 <body>
-  <!-- Navbar -->
+  <!-- Navigation -->
   <nav class="navbar">
     <div class="logo-container">
       <img src="Logo.jpg" alt="Dustify Logo" class="logo" />
@@ -22,15 +24,17 @@
     <div class="nav-actions">
       <a href="booking.html" class="book-btn">Book Now</a>
       <button class="dark-toggle" onclick="toggleDarkMode()">
-        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
-          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/>
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"
+          fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round">
+          <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" />
         </svg>
       </button>
     </div>
 
     <label for="menu-toggle" class="menu-icon">☰</label>
     <input type="checkbox" id="menu-toggle" />
+
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About</a></li>
@@ -42,34 +46,29 @@
   <!-- Contact Section -->
   <section class="contact" data-aos="fade-up">
     <h2>Contact Us</h2>
-    <p>We'd love to hear from you! Please fill out the form below and we'll get in touch soon.</p>
-
+    <p>If you have any questions or want to book a service, feel free to reach out to us!</p>
     <form action="https://formsubmit.co/shreenivasaenterprises1328@gmail.com" method="POST" class="contact-form">
-      <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_template" value="box">
       <input type="text" name="name" placeholder="Your Name" required />
       <input type="email" name="email" placeholder="Your Email" required />
-      <input type="tel" name="phone" placeholder="Your Phone Number" />
-      <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-      <button type="submit" class="submit-btn">Send Message</button>
+      <input type="tel" name="phone" placeholder="Phone Number" required />
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
     </form>
   </section>
 
   <!-- WhatsApp Chat Button -->
-  <a href="https://wa.me/917483810902" class="whatsapp-float" target="_blank">
-    <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="WhatsApp" />
-    <span class="whatsapp-text">Chat with us</span>
+  <a href="https://wa.me/917483810902?text=Hi%20Dustify%2C%20I%20would%20like%20to%20inquire%20about%20your%20services."
+     class="whatsapp-chat" target="_blank">
+    <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="Chat with us on WhatsApp" />
+    <span class="chat-preview">Chat with us</span>
   </a>
 
-  <!-- Footer -->
   <footer>
     &copy; 2025 Dustify. All rights reserved.
   </footer>
 
-  <!-- Scripts -->
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
+  <script>AOS.init();</script>
 </body>
+
 </html>
