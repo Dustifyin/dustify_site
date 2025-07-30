@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Services | Dustify</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
   <script>
     function toggleDarkMode() {
       document.body.classList.toggle("dark-mode");
@@ -18,13 +17,13 @@
   <nav class="navbar">
     <div class="logo-container">
       <img src="Logo.jpg" alt="Dustify Logo" class="logo" />
-
     </div>
 
     <div class="nav-actions">
       <a href="booking.html" class="book-btn">Book Now</a>
       <button class="dark-toggle" onclick="toggleDarkMode()">
-        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/>
         </svg>
       </button>
@@ -41,30 +40,39 @@
     </ul>
   </nav>
 
-  <section class="services" data-aos="fade-up">
+  <header class="hero" data-aos="fade-up">
     <h1>Our Services</h1>
-    <div class="service-list">
-      <div class="service-item">
-        <h2>🏠 Home Cleaning</h2>
-        <p>Deep and regular cleaning for residential homes by trained professionals.</p>
-      </div>
-      <div class="service-item">
-        <h2>🏢 Building Management System (BMS)</h2>
-        <p>Automation and maintenance of electrical, HVAC, and security systems.</p>
-      </div>
-      <div class="service-item">
-        <h2>🌿 Field Cleaning</h2>
-        <p>Comprehensive outdoor cleaning and maintenance for open land and gardens.</p>
-      </div>
-      <div class="service-item">
-        <h2>🚰 Borewell Cleaning</h2>
-        <p>Cleaning and restoration of borewells for better water quality and flow.</p>
-      </div>
-      <div class="service-item">
-        <h2>🎉 Hall Decoration</h2>
-        <p>Creative decoration services for functions, parties, and special events.</p>
-      </div>
-    </div>
+    <p>Explore the wide range of services offered by Dustify for homes, businesses, and events.</p>
+  </header>
+
+  <section id="home-cleaning" class="service-section" data-aos="fade-up">
+    <h2>🏠 Home Cleaning</h2>
+    <p>From deep cleaning to regular maintenance, we ensure your home is sparkling clean and hygienic.</p>
+  </section>
+
+  <section id="bms" class="service-section" data-aos="fade-up">
+    <h2>⚙️ Building Management System (BMS)</h2>
+    <p>Comprehensive BMS solutions to streamline and automate building operations for safety and efficiency.</p>
+  </section>
+
+  <section id="borewell" class="service-section" data-aos="fade-up">
+    <h2>💧 Borewell Services</h2>
+    <p>From drilling to maintenance, our borewell solutions keep your water supply reliable and functional.</p>
+  </section>
+
+  <section id="field-cleaning" class="service-section" data-aos="fade-up">
+    <h2>🌾 Field Cleaning</h2>
+    <p>We offer large-scale field and outdoor cleaning for farms, plots, and construction zones.</p>
+  </section>
+
+  <section id="event-management" class="service-section" data-aos="fade-up">
+    <h2>🎉 Event Management</h2>
+    <p>Decorative setups and on-site support for weddings, parties, and corporate events — stress-free and elegant.</p>
+  </section>
+
+  <section id="car-service" class="service-section" data-aos="fade-up">
+    <h2>🚗 Car Services</h2>
+    <p>Exterior wash, interior detailing, and complete car care at your doorstep with expert hands.</p>
   </section>
 
   <footer>
@@ -76,5 +84,4 @@
     AOS.init();
   </script>
 </body>
-
 </html>
