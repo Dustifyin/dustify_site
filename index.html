@@ -3,41 +3,35 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Dustify | Cleaning & Facility Services</title>
-  <link rel="stylesheet" href="style.css"/>
-  <style>
-    /* Inline some key styles to ensure fast load */
-    body {
-      margin: 0;
+  <title>Home | Dustify</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle("dark-mode");
     }
-  </style>
+  </script>
 </head>
+
 <body>
-
   <nav class="navbar">
-    <!-- Logo -->
     <div class="logo-container">
-      <a href="index.html">
-        <img src="Logo.jpg" alt="Dustify Logo" class="logo" />
-
-      </a>
+      <img src="Logo.jpg" alt="Dustify Logo" class="logo" />
     </div>
 
-    <!-- Navigation toggler -->
-    <input type="checkbox" id="menu-toggle" />
-    <label for="menu-toggle" class="menu-icon">☰</label>
-
-    <!-- Book Now + Dark Mode Top Right -->
     <div class="nav-actions">
       <a href="booking.html" class="book-btn">Book Now</a>
-      <button class="dark-toggle" onclick="toggleDarkMode()" aria-label="Toggle dark mode">
-        <svg id="dark-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
-          <path id="moon-icon" d="M21 12.79A9 9 0 0111.21 3a7 7 0 108.58 9.79z" fill="currentColor"/>
+      <button class="dark-toggle" onclick="toggleDarkMode()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/>
         </svg>
       </button>
     </div>
 
-    <!-- Navigation Links -->
+    <label for="menu-toggle" class="menu-icon">☰</label>
+    <input type="checkbox" id="menu-toggle" />
+
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About</a></li>
@@ -46,50 +40,44 @@
     </ul>
   </nav>
 
-  <!-- Hero Section -->
-  <section class="hero">
+  <header class="hero" data-aos="fade-down">
     <h1>Welcome to Dustify</h1>
-    <p>Your trusted partner in cleaning & facility services</p>
-    <a href="booking.html" class="cta-btn">Book a Service</a>
-  </section>
+    <p>Your one-stop solution for home cleaning, BMS, borewell, car service, and more.</p>
+    <a href="booking.html" class="hero-btn">Get Started</a>
+  </header>
 
-  <!-- Features Section -->
-  <section>
-    <h2>Why Choose Us</h2>
-    <div class="feature-grid">
-      <div class="feature-card">
-        <h3>Trusted Professionals</h3>
-        <p>Skilled team trained for every service requirement.</p>
-      </div>
-      <div class="feature-card">
-        <h3>Affordable Pricing</h3>
-        <p>Transparent, competitive rates with no hidden charges.</p>
-      </div>
-      <div class="feature-card">
-        <h3>Reliable Support</h3>
-        <p>We’re available to support and serve you better.</p>
-      </div>
+  <section class="highlights" data-aos="fade-up">
+    <div class="highlight-box">
+      <h3>Home Cleaning</h3>
+      <p>Reliable, deep, and detailed cleaning for every corner of your home.</p>
+    </div>
+    <div class="highlight-box">
+      <h3>Car Service</h3>
+      <p>Professional car cleaning and maintenance, delivered to your doorstep.</p>
+    </div>
+    <div class="highlight-box">
+      <h3>Borewell & BMS</h3>
+      <p>Expert support for building management and water services.</p>
     </div>
   </section>
 
-  <!-- Footer -->
+  <section class="why-choose-us" data-aos="fade-up">
+    <h2>Why Choose Us?</h2>
+    <ul>
+      <li>✅ Expertise You Can Trust</li>
+      <li>✅ All-in-One Convenience</li>
+      <li>✅ Customer-First Approach</li>
+      <li>✅ Transparent & Fair Pricing</li>
+      <li>✅ On-Time, Every Time</li>
+      <li>✅ Locally Trusted in Bangalore</li>
+    </ul>
+  </section>
+
   <footer>
     &copy; 2025 Dustify. All rights reserved.
   </footer>
 
-  <!-- Dark Mode JS -->
-  <script>
-    function toggleDarkMode() {
-      document.body.classList.toggle("dark-mode");
-      const icon = document.getElementById("moon-icon");
-
-      // Switch between moon and sun
-      if (document.body.classList.contains("dark-mode")) {
-        icon.setAttribute("d", "M12 4.5V2m0 20v-2.5m7.78-10.28l1.77-1.77m-15.56 0l1.77 1.77M4.5 12H2m20 0h-2.5m-1.72 7.78l1.77 1.77m-15.56 0l1.77-1.77M12 7a5 5 0 100 10 5 5 0 000-10z");
-      } else {
-        icon.setAttribute("d", "M21 12.79A9 9 0 0111.21 3a7 7 0 108.58 9.79z");
-      }
-    }
-  </script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>AOS.init();</script>
 </body>
 </html>
